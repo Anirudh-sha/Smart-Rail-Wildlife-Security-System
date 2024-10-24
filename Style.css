@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and margin don't affect total width/height */
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: url('A_beautiful_wildlife-themed_background_featuring_l.png') no-repeat center center fixed;
+    background: url('A_beautiful_wildlife-themed_background_featuring_l.png') no-repeat center center fixed; /* Update this path as needed */
     background-size: cover;
     color: #fff;
 }
@@ -46,4 +46,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
