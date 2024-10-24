@@ -6,28 +6,42 @@ body {
 
 .image-layout {
     display: flex;
-    justify-content: center; /* Center the big image */
+    justify-content: center; /* Center align big image */
+    align-items: center;
     margin: 20px;
 }
 
-/* Big image */
 .big-image {
-    width: 60%; /* Adjust as needed for size */
-    height: auto;
+    width: 100%; /* Make big image responsive */
+    max-width: 800px; /* Optional: set a max width */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Layout for two small images below the big image */
+/* Layout for small images */
 .small-images-layout {
     display: flex;
-    justify-content: center; /* Center the small images */
+    justify-content: center; /* Center small images */
     margin: 20px;
 }
 
-/* Small images without fixed width */
 .small-image {
-    max-width: 100%; /* Maintain original size */
+    width: 45%; /* Responsive width for small images */
     height: auto; /* Maintain aspect ratio */
-    margin: 0 10px; /* Add space between the images */
-    /* Optional: Set fixed dimensions if you want */
-    /* width: 200px; Uncomment to set a fixed width */
+    margin: 0 10px; /* Space between small images */
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .big-image, .small-image {
+        width: 100%; /* Make images full width on small screens */
+        margin: 10px 0; /* Margin for small screens */
+    }
 }
