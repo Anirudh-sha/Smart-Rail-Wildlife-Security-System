@@ -10,11 +10,10 @@ body {
     margin: 20px;
 }
 
-/* Big image on the left */
+/* Big image */
 .big-image {
-    width: 60%; /* Big image takes 60% of the width */
+    width: 60%; /* Adjust as needed for size */
     height: auto;
-    margin-right: 20px; /* Adds space between the big image and the right-side images */
 }
 
 /* Layout for two small images below the big image */
@@ -24,8 +23,11 @@ body {
     margin: 20px;
 }
 
+/* Small images without fixed width */
 .small-image {
-    width: 45%; /* Set a percentage width for small images */
+    max-width: 100%; /* Maintain original size */
     height: auto; /* Maintain aspect ratio */
     margin: 0 10px; /* Add space between the images */
+    /* Optional: Set fixed dimensions if you want */
+    /* width: 200px; Uncomment to set a fixed width */
 }
