@@ -6,8 +6,7 @@ body {
 
 .image-layout {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Center the big image */
     margin: 20px;
 }
 
@@ -18,16 +17,15 @@ body {
     margin-right: 20px; /* Adds space between the big image and the right-side images */
 }
 
-/* Right side contains two smaller images */
-.right-side {
+/* Layout for two small images below the big image */
+.small-images-layout {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
-    justify-content: space-between;
-    height: 100%; /* This ensures that the two small images fill the height of the big image */
+    justify-content: center; /* Center the small images */
+    margin: 20px;
 }
 
 .small-image {
-    width: 200px; /* Set a fixed width for small images */
-    height: auto;
-    margin-bottom: 10px; /* Space between the two images */
+    width: 45%; /* Set a percentage width for small images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add space between the images */
 }
