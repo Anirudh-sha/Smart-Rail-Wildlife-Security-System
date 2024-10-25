@@ -11,38 +11,34 @@ body {
     margin: 20px;
 }
 
-/* Main style for all images */
-img {
-    width: 100%; /* Full width of container */
-    max-width: 600px; /* Consistent max width for alignment */
-    height: auto;
-    margin: 10px auto; /* Centers images with margin */
-}
-
-/* Specific style for layout consistency */
-.big-image,
-.small-images-layout img {
-    width: calc(100% - 40px); /* Ensures alignment across images */
+/* Style for the big image (1.jpg) */
+.big-image {
+    width: calc(100% - 40px); /* Ensure it aligns with other images */
     max-width: 600px;
+    height: auto;
+    margin: 0 auto 10px; /* Center-align with bottom margin */
 }
 
+/* Style for the smaller images (2.jpg, 3.jpg, etc.) */
 .small-images-layout {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px; /* Space between images */
-    justify-content: center; /* Center-aligns small images */
 }
 
 .small-images-layout img {
-    width: calc(50% - 10px); /* Each small image takes 50% of row */
+    width: calc(50% - 10px); /* Two images per row, with spacing */
     max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Responsive handling */
+/* Media query to ensure responsiveness */
 @media (max-width: 768px) {
     .big-image,
     .small-images-layout img {
         width: 100%; /* Full-width on smaller screens */
-        margin: 10px 0;
+        margin: 0 auto;
     }
 }
