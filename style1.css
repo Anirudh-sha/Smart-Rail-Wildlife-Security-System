@@ -12,14 +12,20 @@ body {
     margin-bottom: 20px; /* Adds consistent spacing below each set of images */
 }
 
-.center,
-.left,
-.right,
-.small-images-layout img {
-    width: 100%; /* All images will take up the full width of their container */
-    max-width: 500px; /* Set a consistent max width for all images */
+/* Consistent image sizing */
+.image-layout img,
+.small-images-layout img,
+.additional-images-layout img {
+    width: 500px; /* Set all images to the same fixed width */
     height: auto;
     margin: 5px; /* Small margin around each image for spacing */
+}
+
+.center,
+.left,
+.right {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Responsive adjustments for mobile */
@@ -30,9 +36,11 @@ body {
         align-items: center;
     }
 
-    .center,
-    .left,
-    .right {
-        max-width: 100%; /* Ensure images scale down on smaller screens */
+    /* Adjust width on smaller screens */
+    .image-layout img,
+    .small-images-layout img,
+    .additional-images-layout img {
+        width: 90%; /* Width adjustment for mobile */
+        max-width: 500px;
     }
 }
