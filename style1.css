@@ -4,41 +4,35 @@ body {
     padding: 0;
 }
 
-.image-layout {
+.image-layout,
+.small-images-layout,
+.additional-images-layout {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
-/* Style for the big image (1.jpg) */
-.big-image {
-    width: calc(100% - 40px); /* Ensure it aligns with other images */
-    max-width: 600px;
-    height: auto;
-    margin: 0 auto 10px; /* Center-align with bottom margin */
-}
-
-/* Style for the smaller images (2.jpg, 3.jpg, etc.) */
-.small-images-layout {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Space between images */
+    margin-bottom: 20px; /* Adds consistent spacing below each set of images */
 }
 
+.center,
+.left,
+.right,
 .small-images-layout img {
-    width: calc(50% - 10px); /* Two images per row, with spacing */
-    max-width: 300px;
+    width: 100%; /* All images will take up the full width of their container */
+    max-width: 500px; /* Set a consistent max width for all images */
     height: auto;
-    margin-bottom: 10px;
+    margin: 5px; /* Small margin around each image for spacing */
 }
 
-/* Media query to ensure responsiveness */
+/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-    .big-image,
-    .small-images-layout img {
-        width: 100%; /* Full-width on smaller screens */
-        margin: 0 auto;
+    .small-images-layout,
+    .additional-images-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center,
+    .left,
+    .right {
+        max-width: 100%; /* Ensure images scale down on smaller screens */
     }
 }
