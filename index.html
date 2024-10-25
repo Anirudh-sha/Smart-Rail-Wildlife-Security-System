@@ -13,21 +13,22 @@
             padding: 0;
         }
 
-        .image-layout,
-        .small-images-layout,
-        .additional-images-layout {
+        h1, h2 {
+            text-align: center; /* Center-align headers */
+        }
+
+        .image-layout, .small-images-layout, .additional-images-layout {
             display: flex;
             justify-content: center;
             flex-wrap: wrap; /* Allow wrapping for better alignment */
             margin-bottom: 20px; /* Adds consistent spacing below each set of images */
         }
 
-        /* Set all images to a consistent size */
         img {
             width: 100%; /* Full width of the container */
             max-width: 500px; /* Set a consistent max width for all images */
             height: auto; /* Maintain aspect ratio */
-            margin: 5px; /* Small margin around each image for spacing */
+            margin: 10px; /* Margin around each image for spacing */
         }
 
         /* Responsive adjustments for mobile */
@@ -50,22 +51,23 @@
     </header>
 
     <section id="Content">
-        <h1 style="text-align: center; font-size: 36px; font-weight: bold;">Smart Rail Wildlife Security System</h1><br>
+        <h1 style="font-size: 36px; font-weight: bold;">Smart Rail Wildlife Security System</h1>
         <br>
-        <h2 style="text-align: left; font-size: 28px; font-weight: bold;">Brief Analysis:</h2>
-        <div class="image-layout"> <!-- Flexbox container for the big image -->
-            <img src="1.jpg" alt="Elephant near railway" class="center"> <!-- Big image -->
+        <h2 style="font-size: 28px; font-weight: bold;">Brief Analysis:</h2>
+        
+        <div class="image-layout">
+            <img src="1.jpg" alt="Elephant near railway"> <!-- Big image -->
         </div>
 
-        <div class="small-images-layout"> <!-- Container for small images -->
-            <img src="2.jpg" alt="Elephant near railway" class="left">
-            <img src="3.jpg" alt="Elephant near railway" class="right">
+        <div class="small-images-layout">
+            <img src="2.jpg" alt="Elephant near railway">
+            <img src="3.jpg" alt="Elephant near railway">
         </div>
 
-        <div class="additional-images-layout"> <!-- Container for additional images -->
-            <img src="4.jpg" alt="Elephant near railway" class="center"><br>
-            <img src="5.jpg" alt="Elephant near railway" class="center"><br>
-            <img src="6.jpg" alt="Elephant near railway" class="center">
+        <div class="additional-images-layout">
+            <img src="4.jpg" alt="Elephant near railway">
+            <img src="5.jpg" alt="Elephant near railway">
+            <img src="6.jpg" alt="Elephant near railway">
         </div>
     </section>
 
