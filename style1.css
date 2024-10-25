@@ -4,43 +4,30 @@ body {
     padding: 0;
 }
 
-.image-layout,
-.small-images-layout,
-.additional-images-layout {
+.image-layout {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px; /* Adds consistent spacing below each set of images */
+    justify-content: center; /* Center the big image */
+    margin: 20px;
 }
 
-/* Consistent image sizing */
-.image-layout img,
-.small-images-layout img,
-.additional-images-layout img {
-    width: 500px; /* Set all images to the same fixed width */
-    height: auto;
-    margin: 5px; /* Small margin around each image for spacing */
-}
-
-.center,
-.left,
-.right {
-    max-width: 100%;
+/* Big image */
+.big-image {
+    width: 60%; /* Adjust as needed for size */
     height: auto;
 }
 
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-    .small-images-layout,
-    .additional-images-layout {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Layout for two small images below the big image */
+.small-images-layout {
+    display: flex;
+    justify-content: center; /* Center the small images */
+    margin: 20px;
+}
 
-    /* Adjust width on smaller screens */
-    .image-layout img,
-    .small-images-layout img,
-    .additional-images-layout img {
-        width: 90%; /* Width adjustment for mobile */
-        max-width: 500px;
-    }
+/* Small images without fixed width */
+.small-image {
+    max-width: 100%; /* Maintain original size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add space between the images */
+    /* Optional: Set fixed dimensions if you want */
+    /* width: 200px; Uncomment to set a fixed width */
 }
