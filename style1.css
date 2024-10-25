@@ -6,42 +6,41 @@ body {
 
 .image-layout {
     display: flex;
-    justify-content: center; /* Center align big image */
-    align-items: center;
+    flex-wrap: wrap; /* Wraps images to fit smaller screens */
+    justify-content: center;
     margin: 20px;
 }
 
-.big-image {
-    width: 100%; /* Make big image responsive */
-    max-width: 800px; /* Optional: set a max width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Layout for small images */
-.small-images-layout {
-    display: flex;
-    justify-content: center; /* Center small images */
-    margin: 20px;
-}
-
+.big-image,
 .small-image {
-    width: 45%; /* Responsive width for small images */
+    width: 100%; /* Make both images take full width in mobile view */
+    max-width: 600px; /* Set max-width to ensure images are aligned */
     height: auto; /* Maintain aspect ratio */
-    margin: 0 10px; /* Space between small images */
+    margin: 0 auto 10px; /* Center-align and add spacing */
 }
 
-/* Add a media query for smaller screens */
+/* Grid layout for larger screens */
+@media (min-width: 768px) {
+    .image-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 10px; /* Space between images */
+    }
+    
+    .big-image {
+        grid-column: span 2; /* Big image spans both columns */
+        max-width: 100%; /* Full-width in grid */
+    }
+
+    .small-image {
+        width: 100%; /* Small images take full width of grid cell */
+    }
+}
+
+/* Further adjustments for specific image sizes */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 28px; /* Adjust font size for smaller screens */
-    }
-
-    h2 {
-        font-size: 24px; /* Adjust font size for smaller screens */
-    }
-
     .big-image, .small-image {
-        width: 100%; /* Make images full width on small screens */
-        margin: 10px 0; /* Margin for small screens */
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
