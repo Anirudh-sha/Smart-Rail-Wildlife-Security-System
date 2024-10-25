@@ -7,7 +7,7 @@ body {
 .image-layout {
     display: flex;
     justify-content: center; /* Center the big image */
-    margin: 10px;
+    margin: 5px;
 }
 
 /* Big image */
