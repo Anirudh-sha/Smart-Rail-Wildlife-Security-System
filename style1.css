@@ -4,31 +4,41 @@ body {
     padding: 0;
 }
 
-/* Big image */
+.image-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Style for the big image (1.jpg) */
 .big-image {
-    width: 100%; /* Full width of the container */
-    max-width: 600px; /* Set max width for the big image */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Block-level to center */
-    margin: 0 auto; /* Center the image */
+    width: calc(100% - 40px); /* Ensure it aligns with other images */
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 10px; /* Center-align with bottom margin */
 }
 
-/* Container for small images */
+/* Style for the smaller images (2.jpg, 3.jpg, etc.) */
 .small-images-layout {
-    display: flex; /* Use flexbox to arrange side by side */
-    justify-content: center; /* Center the small images */
-    margin: 20px 0; /* Add vertical margin */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between images */
 }
 
-/* Small images */
-.small-image {
-    width: 45%; /* Set width to allow for two side by side */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 5%; /* Space between small images */
+.small-images-layout img {
+    width: calc(50% - 10px); /* Two images per row, with spacing */
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Center alignment for additional images */
-img.center {
-    display: block;
-    margin: 20px auto; /* Center additional images */
+/* Media query to ensure responsiveness */
+@media (max-width: 768px) {
+    .big-image,
+    .small-images-layout img {
+        width: 100%; /* Full-width on smaller screens */
+        margin: 0 auto;
+    }
 }
