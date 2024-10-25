@@ -6,41 +6,39 @@ body {
 
 .image-layout {
     display: flex;
-    flex-wrap: wrap; /* Wraps images to fit smaller screens */
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
 }
 
-.big-image,
-.small-image {
-    width: 100%; /* Make both images take full width in mobile view */
-    max-width: 600px; /* Set max-width to ensure images are aligned */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto 10px; /* Center-align and add spacing */
+/* Style for the big image (1.jpg) */
+.big-image {
+    width: calc(100% - 40px); /* Ensure it aligns with other images */
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 10px; /* Center-align with bottom margin */
 }
 
-/* Grid layout for larger screens */
-@media (min-width: 768px) {
-    .image-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
-        gap: 10px; /* Space between images */
-    }
-    
-    .big-image {
-        grid-column: span 2; /* Big image spans both columns */
-        max-width: 100%; /* Full-width in grid */
-    }
-
-    .small-image {
-        width: 100%; /* Small images take full width of grid cell */
-    }
+/* Style for the smaller images (2.jpg, 3.jpg, etc.) */
+.small-images-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between images */
 }
 
-/* Further adjustments for specific image sizes */
-@media (max-width: 600px) {
-    .big-image, .small-image {
-        width: 100%;
-        margin-bottom: 10px;
+.small-images-layout img {
+    width: calc(50% - 10px); /* Two images per row, with spacing */
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Media query to ensure responsiveness */
+@media (max-width: 768px) {
+    .big-image,
+    .small-images-layout img {
+        width: 100%; /* Full-width on smaller screens */
+        margin: 0 auto;
     }
 }
